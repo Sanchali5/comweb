@@ -1,0 +1,125 @@
+<style >
+body {
+  font-family: 'open sans';
+  overflow-x: hidden; }
+
+img {
+  max-width: 100%;
+  height:300px;
+   box-shadow: 0px 3px 5px rgba(0,0,0,0.9); }
+
+
+
+.preview-thumbnail.nav-tabs {
+  border: none;
+  margin-top: 0px;
+   
+    }
+  .preview-thumbnail.nav-tabs li {
+    width:60%;
+    
+    }
+    .preview-thumbnail.nav-tabs li img {
+      max-width: 100%;
+      height:70px;
+      display: block;
+      box-shadow: 0px 3px 5px rgba(0,0,0,0.9);
+       }
+    .preview-thumbnail.nav-tabs li a {
+      padding: 10px;
+      margin: 5px;
+       box-shadow: 0px 3px 5px rgba(0,0,0,0.9); 
+   }
+    
+
+  .tab-content img {
+    width: 100%;
+    height:100%;
+    }
+
+.card {
+  margin-top: 50px;
+  background: #E5E7E9;
+  padding: 3em;
+  line-height: 1.5em; }
+
+
+
+
+.product-title, .price, .sizes, .colors {
+  text-transform: UPPERCASE;
+  font-weight: bold; }
+
+.checked, .price span {
+  color: #ff9f1a; }
+
+.product-title, .rating, .product-description, .price, .sizes {
+  margin-bottom: 15px; }
+
+.product-title {
+  margin-top: 0; }
+
+
+
+
+.add-to-cart, .like {
+  background: #ff9f1a;
+  padding: 1.2em 1.5em;
+  border: none;
+  text-transform: UPPERCASE;
+  font-weight: bold;
+  color: #fff;
+   }
+  .add-to-cart:hover, .like:hover {
+    background: #b36800;
+    color: #fff; }
+.tooltip-inner {
+  padding: 1.3em; }
+
+
+</style>
+<div class="container">
+		<div class="card">
+			<div class="container-fliud">
+				<div class="wrapper row" ng-repeat="p in product_details">
+					<div class="preview col-md-4" >
+						
+						<div class="preview-pic tab-content">
+						  <div class="tab-pane active" ><img src="{{p.img}}" /></div>
+						  <div class="tab-pane" ><img src="{{p.img}}" /></div>
+						  <div class="tab-pane" ><img src="{{p.img}}" /></div>
+						  <div class="tab-pane" ><img src="{{p.img}}" /></div>
+						  
+						</div>
+					</div>	
+						<div class="preview col-md-3">
+						<ul class="preview-thumbnail nav nav-tabs">
+						  <li class="active"><a ><img src="{{p.img}}" /></a></li>
+						  <li><a ><img src="{{p.img}}" /></a></li>
+						  <li><a ><img src="{{p.img}}" /></a></li>
+						  <li><a ><img src="{{p.img}}" /></a></li>
+						 
+						</ul>
+						
+					</div>
+					
+					<div class="details col-md-5">
+						<h3 class="product-title">{{p.product_type}}</h3>
+						<p class="product-description">{{p.product_subtype}}</p>
+						
+						<p class="product-description">{{p.product_description}}</p>
+						</br>
+						<h4 class="price">current price: <span>{{p.product_price}}</span></h4>
+						</br>
+						<p ><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
+						
+						
+						<div class="action">
+						<a  class="add-to-cart btn btn-default" href="/#!/cart"> add to cart </a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
