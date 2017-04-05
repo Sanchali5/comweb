@@ -13,6 +13,7 @@ module.exports = {
 				console.error(err);
 				return;
 			}
+			console.log(result);
 			res.send(result);
 		});	
 
@@ -101,7 +102,7 @@ module.exports = {
 		app.get('/productdetails', function (req, res){   
 			console.log('id======'+req.query.pid);
 		    var product_id= req.query.pid;
-			connection.query('select product_id,product_type,product_subtype,product_description,product_price,img from product where product_id=?',[product_id],function (err,result){	 
+			connection.query('select product_id,product_type,product_subtype,product_description,product_price,img,img1,img2,img3 from product where product_id=?',[product_id],function (err,result){	 
 				if(err) {
 					console.log(err); 
 					return;
@@ -166,9 +167,11 @@ module.exports = {
                 product_description: req.body.product_description,
                 date_of_manufacture: req.body.date_of_manufacture, 
                 product_price: req.body.product_price,
-                img: req.files[0].path.substring(6)
-			      
-		     };
+                img: req.files[0].path.substring(6),
+                img1: req.files[1].path.substring(6),
+                img2: req.files[2].path.substring(6),
+                img3: req.files[3].path.substring(6),
+             };
 
 		     connection.query('insert into product set ?', product, function (err,result){
 			      if(err) {

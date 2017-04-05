@@ -65,7 +65,28 @@ app.config(function($routeProvider, $locationProvider)
 
 });
 
-
+app.factory('comwebService', function($http) {
+    return {
+        addToCart: function(product) {
+            if(localStorage.getItem('user_id')){
+                console.log(product);
+                var bag = {
+                    user_id:localStorage.getItem('user_id'),
+                    product_id:product.product_id
+                };
+                $http.post('/add_to_bag',bag).then(function (response){ 
+                    console.log(response);
+                    window.location = '/#!/cart';
+                },function (error){
+                    console.log(error);
+                });
+            }
+            else{
+                alert('Login to add to cart');
+            }
+        }
+    }
+});
 
 
 app.controller("HomeController",function ($scope,$http){
@@ -73,14 +94,14 @@ app.controller("HomeController",function ($scope,$http){
 
 });
 
-app.controller("ProductController",function($scope,$http,$routeParams){
+app.controller("ProductController",function($scope,$http,$routeParams,comwebService){
         
     var proid=$routeParams.pid;
+    
     $http.get('/productdetails?pid='+proid).then(function (response) {
-     console.log('response.data');
-    console.log(response.data);
     $scope.product_details= response.data;
      console.log($scope.product_details);
+     // var displayPic= $scope.product_details[0].img;
 
   }, function (error) {
 
@@ -88,6 +109,14 @@ app.controller("ProductController",function($scope,$http,$routeParams){
   });
 
     console.log(proid);
+    $scope.checklogin = function(){
+        comwebService.addToCart($scope.product_details[0]);
+    };
+    // $scope.getImage = function(p.img){
+    //     displayPic=p.img;
+
+    // };
+    
 });
 
 app.controller("SignupController",function ($scope, $http)
@@ -127,10 +156,12 @@ app.controller("TemplateController",function ($scope,$rootScope,$http)
 
                 if(response.data.length>0) 
                 {
-                    localStorage.setItem('key1',response.data[0].user_name);
-                    localStorage.setItem('key2',response.data[0].user_id);
+                    localStorage.setItem('user_name',response.data[0].user_name);
+                    localStorage.setItem('user_id',response.data[0].user_id);
                     window.location = '/';
                     
+                }else{
+                  alert("Incorrect username or password");
                 }
                 
          }, function (error) {
@@ -140,27 +171,7 @@ app.controller("TemplateController",function ($scope,$rootScope,$http)
      };
      
  });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-app.controller('SareeController', function($scope,$http, $routeParams){ 
+app.controller('SareeController', function($scope,$http, $routeParams, comwebService){ 
 
     $http.get('/show/' + $routeParams.item).then(function (response) {
         console.log(response.data);
@@ -172,19 +183,8 @@ app.controller('SareeController', function($scope,$http, $routeParams){
     });
     
     $scope.add_to_bag = function(product){
-        console.log(product);
-        var bag = {
-            user_id:localStorage.getItem('key2'),
-             product_id:product.product_id
-        };
-             
-        console.log('bag');
-        $http.post('/add_to_bag',bag).then(function (response){ 
-            console.log(response);
-        },function (error){
-            
-            console.log(error);
-        });
+
+        comwebService.addToCart(product);
     };
     $scope.view_product = function(product){
         console.log(product);
@@ -196,7 +196,7 @@ app.controller('SareeController', function($scope,$http, $routeParams){
 });
 
 app.controller("CartController",function ($scope,$http){
-    $http.get('/cart?user_id='+localStorage.getItem('key2')).then(function (response) {
+    $http.get('/cart?user_id='+localStorage.getItem('user_id')).then(function (response) {
      console.log('response.data');
     console.log(response.data);
     $scope.lists= response.data;
@@ -208,7 +208,7 @@ app.controller("CartController",function ($scope,$http){
     $scope.remove_from_bag = function(list){
    
         var bag = {
-             user_id:localStorage.getItem('key2'),
+             user_id:localStorage.getItem('user_id'),
              product_id:list.product_id
 
              
@@ -217,7 +217,8 @@ app.controller("CartController",function ($scope,$http){
            console.log('remove_bag');
         $http.post('remove_from_bag',bag).then(function (response){ 
             console.log(response);
-           
+            var index=$scope.lists.indexOf(list);
+            $scope.lists.splice(index,1);
 
         },function (error){
             
@@ -259,7 +260,10 @@ app.controller("AddproductController",function ($scope, $http)
              product_description: $scope.product_description,
              product_price: $scope.product_price,
              date_of_manufacture: $scope.date_of_manufacture,
-             img:$scope.img
+             img:$scope.img,
+             img1:$scope.img1,
+             img2:$scope.img2,
+             img3:$scope.img3
 
         };
 
@@ -274,12 +278,6 @@ app.controller("AddproductController",function ($scope, $http)
         });
 
     };
-});
-app.controller("UploadpicController",function ($scope, $http)
-{
-    
-    
-        
 });
 
 
@@ -298,8 +296,8 @@ app.controller("AdminLoginController",function ($scope,$rootScope,$http)
 
                 if(response.data.length>0) 
                 {
-                    localStorage.setItem('key1',response.data[0].username);
-                    localStorage.setItem('key2',response.data[0].id);
+                    localStorage.setItem('user_name',response.data[0].username);
+                    localStorage.setItem('user_id',response.data[0].id);
                     window.location = '/#!/add_product';
                     
                 }

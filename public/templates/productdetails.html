@@ -3,12 +3,6 @@ body {
   font-family: 'open sans';
   overflow-x: hidden; }
 
-img {
-  max-width: 100%;
-  height:300px;
-   box-shadow: 0px 3px 5px rgba(0,0,0,0.9); }
-
-
 
 .preview-thumbnail.nav-tabs {
   border: none;
@@ -85,19 +79,19 @@ img {
 					<div class="preview col-md-4" >
 						
 						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" ><img src="{{p.img}}" /></div>
-						  <div class="tab-pane" ><img src="{{p.img}}" /></div>
-						  <div class="tab-pane" ><img src="{{p.img}}" /></div>
-						  <div class="tab-pane" ><img src="{{p.img}}" /></div>
+						  <div class="tab-pane active" ><img src="{{displayPic}}" ng-click="getImage({{p.img}})" /></div>
+						  <div class="tab-pane" ><img src="{{p.img1}}" /></div>
+						  <div class="tab-pane" ><img src="{{p.img2}}" /></div>
+						  <div class="tab-pane" ><img src="{{p.img3}}" /></div>
 						  
 						</div>
 					</div>	
 						<div class="preview col-md-3">
 						<ul class="preview-thumbnail nav nav-tabs">
 						  <li class="active"><a ><img src="{{p.img}}" /></a></li>
-						  <li><a ><img src="{{p.img}}" /></a></li>
-						  <li><a ><img src="{{p.img}}" /></a></li>
-						  <li><a ><img src="{{p.img}}" /></a></li>
+						  <li><a ><img src="{{p.img1}}" /></a></li>
+						  <li><a ><img src="{{p.img2}}" /></a></li>
+						  <li><a ><img src="{{p.img3}}" /></a></li>
 						 
 						</ul>
 						
@@ -115,7 +109,7 @@ img {
 						
 						
 						<div class="action">
-						<a  class="add-to-cart btn btn-default" href="/#!/cart"> add to cart </a>
+						<button  class="add-to-cart btn btn-default" type="button" ng-click="checklogin()" > add to cart </button>
 							
 						</div>
 					</div>
