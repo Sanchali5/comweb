@@ -91,12 +91,39 @@ module.exports = {
 		  
 		});
 
+
+		app.get('/showsubtype', function(req, res) {
+			connection.query('select * from subtype where type_id=?',[req.query.type_id], function(err, result) {
+				console.log(result);
+				res.send(result);
+			});
+		});
+
+
+
+
+
+
+		app.get('/showtype', function(req, res) {
+			connection.query('select * from type', function(err, result) {
+				res.send(result);
+			});
+		});
+
 		app.get('/show/:item', function(req, res) {
 			connection.query('select * from product where product_type = ?', [req.params.item], function(err, result) {
 				console.log(result);
 				res.send(result);
 			});
 		});
+		// app.get('/show/kanjeevaram', function(req, res) {
+		// 	console.log('hii');
+		// 	connection.query('select * from product where product_subtype=1', function(err, result) {
+		// 		console.log('hii');
+		// 		res.send(result);
+		// 	});
+		// });
+
 
 		
 		app.get('/productdetails', function (req, res){   
@@ -186,6 +213,18 @@ module.exports = {
 		      res.send('inserted');
 		       });
 		  
+		});
+		app.post('/add_subtype',function (req, res) {
+		    var subtype = {
+				type: req.body.type
+            };
+		    connection.query('insert into subtype set ?', subtype, function (err,result){
+				if(err) {
+			    	console.error(err);
+			     	return;
+			    }
+		    	res.send('inserted');
+			});
 		});
 	}
 }

@@ -1,0 +1,374 @@
+<style>
+.mySlides {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width:100%;
+  display:none;}
+
+.thumb {
+  position:relative;
+  width:300px;
+  padding:5px;
+  height:240px; 
+  background-color: white;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+}
+.thumb:hover .overlay {opacity:0.9;}
+
+.overlay {
+  position:absolute;
+  top:50px;
+  left:40px;
+  width:110px;
+  height:50px;
+  background:red;
+  opacity:0;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  
+}
+
+.container {
+    position: relative;
+    width: 80%;
+}
+.image1 {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.7;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.hilight h2{
+    font-family: Helvetica, Verdana;
+    color: #FFF;
+    z-index: 200;
+}
+
+.promo {
+    position: relative;
+}
+.promo img {
+    z-index: 1;
+}
+.hilight {
+ background-color: rgba(0,0,0,0.65);
+ position: absolute;
+ height: 85px;
+ width: 415px;
+ font-family: Verdana, Geneva, sans-serif;
+ color: #FFF;
+ bottom: 0px;
+ z-index: 1;
+}
+
+
+.dropdown-menu-subtype {
+  float: left;
+  width: 100%;
+  display: none;
+}
+
+.inline { 
+display: inline-block; 
+
+}
+
+.menu-img {
+  height: 200px;
+  border: hidden;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.7);
+
+}
+
+.open {
+  display: block;
+}
+
+.sub-type {
+  margin: 10px;
+}
+div.item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+    padding:10px 90px 10px 100px;
+    float: left;
+
+}
+.caption {
+    margin-top: 10px;
+    margin-left: 15px;
+    display: block;
+
+}
+
+ul {
+  list-style-type: none;
+}
+li {
+  float: left;
+}
+.login1-icon1-div1 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 15px;
+  margin-top: 20px;
+  padding: 4px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.cart12-icon12-div12{
+  position: absolute;
+  top: 0px;
+  right: 50px;
+  margin: 15px;
+  margin-top: 20px;
+  padding: 4px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.login1-icon1-img1 {
+  height: 42px;
+}
+.cart12-icon12-img12{
+  height: 42px;
+}
+
+
+.mega-menu-container {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  display: none;
+}
+
+
+.mega-menu {
+  background: #fff;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  padding: 10px;
+}
+
+.featured_image {
+    float: left;
+    width: 100%;
+    margin-bottom: 1px;
+}
+
+.black {
+    padding: 1px;
+    margin-bottom: 2px;
+    
+}
+
+</style>
+<div class="w3-content w3-section" style="max-width:100%">
+  <img class="mySlides" src="images/saree1.jpg"  style="height:1000px">
+  <img class="mySlides" src="images/saree2.jpg" style="height:1000px">
+  <img class="mySlides" src="images/saree3.jpg" style="height:1000px">
+</div>
+<br>
+<br>
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+    <h2>Collections</h2>
+        <div class="col-md-6 black">
+            <img src="images/saree1.jpg"  class="featured_image" style="height:300px">
+        </div>
+        <div class="col-md-3 black">
+            <div class="col-md-12 black">
+                <img src="images/southsilk8.jpg"  class="featured_image" style="height:150px">
+            </div>
+            <div class="col-md-12 black">
+                <img src="images/kanjeevram8.jpg"  class="featured_image" width="100" style="height:150px">
+            </div>
+        </div>
+        <div class="col-md-3 black">
+            <img src="images/kanjeevaram10.jpg"  class="featured_image" style="height:300px">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-3 black"> 
+           
+                <img src="images/kanjeevaram3.jpg"  class="featured_image" style="height:300px">
+                <div class="overlay">Saree</div>
+            
+        </div>
+        <div class="col-md-3 black">
+            
+                <img src="images/southsilk8.jpg"  class="featured_image" style="height:300px">
+                    <div class="overlay">Saree</div>
+           
+        </div>
+        <div class="col-md-3 black">
+            
+                <img src="images/kanjeevaram1.jpg"  class="featured_image" style="height:300px">
+                    <div class="overlay">Saree</div>
+            
+        </div>
+        <div class="col-md-3 black">
+            
+                <img src="images/saree7.jpg"  class="image" style="height:300px">
+                    <div class="overlay">Saree</div>
+           
+        </div>
+    </div>
+ </div>
+
+<br>
+
+
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+ <h2>Featured Products</h2>
+  
+<div class="row">
+    <div class="col-md-3">
+      
+          <div class="thumb">
+            <img src="images/saree1.jpg"  class="image" style="height:200px">
+          <div class="overlay">Saree</div>
+      </div>
+        
+    </div>
+    <div class="col-md-3">
+      
+          <div class="thumb">
+            <img src="images/kanjeevarm12.jpg"  class="image" style="height:200px">
+          <div class="overlay">Saree</div>
+      </div>
+        
+    </div>
+    <div class="col-md-3">
+      
+          <div class="thumb">
+            <img src="images/kanjeevaram10.jpg"  class="image" style="height:200px">
+          <div class="overlay">Saree</div>
+      
+        </div>
+    </div>
+    <div class="col-md-3">
+      
+          <div class="thumb">
+            <img src="images/kanjeevaram3.jpg"  class="image" style="height:200px">
+          <div class="overlay">Saree</div>
+      </div>
+        
+    </div>
+    </div>
+ </div>
+
+</div>
+<br>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <h2>New Arrivals</h2>
+        <div class="row">
+        <div class="col-md-3">
+          
+              <div class="thumb">
+                <img src="images/saree2.jpg"  class="image" style= "height:200px">
+              <div class="overlay">Saree</div>
+          </div>
+            
+        </div>
+        <div class="col-md-3">
+          
+              <div class="thumb">
+                <img src="images/saree6.jpg"  class="image" style="height:200px">
+              <div class="overlay">Saree</div>
+          </div>
+            
+        </div>
+        <div class="col-md-3">
+          
+              <div class="thumb">
+                <img src="images/saree7.jpg"  class="image" style="height:200px">
+              <div class="overlay">Saree</div>
+          
+            </div>
+        </div>
+        <div class="col-md-3">
+          
+              <div class="thumb">
+                <img src="images/saree1.jpg"  class="image" style="height:200px">
+              <div class="overlay">Saree</div>
+          </div>
+            
+        </div>
+    </div>
+        
+    </div>
+
+
+
+<script type="text/javascript">
+  
+  $(document).ready(function() {
+    $('.dropdown').hover(function() {
+      $('.dropdown-menu-subtype').stop( true, true ).slideDown("fast");
+    });
+
+    $('.dropdown-menu-subtype').hover(function() {}, function() {
+      $('.dropdown-menu-subtype').stop( true, true ).slideUp("fast");
+    });
+  });
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 6000); // Change image every 2 seconds
+}
+</script> 

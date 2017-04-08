@@ -11,59 +11,18 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/caraousel.css"> 
 	<link rel="stylesheet" href="images/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Macondo" rel="stylesheet">
+
 	<link rel="shortcut icon" href="">
-	<!-- <style type="text/css">
-  /*
-Credits:
-Code snippet by @maridlcrmn (Follow me on Twitter)
-Images by Nike.com (http://www.nike.com/us/en_us/)
-Logo by Sneaker-mission.com (http://www.sneaker-mission.com/)
-*/
 
-.navbar-brand { 
-  width: 70px;
-  height: 50px;
-  background: url('http://www.sneaker-mission.com/uploads/3/1/2/7/31279819/5617441.png') no-repeat center center;
-  background-size: 50px;  
-}
 
-.nav-tabs {
-  display: inline-block;
-  border-bottom: none;
-  padding-top: 15px;
-  font-weight: bold;
-}
-.nav-tabs > li > a, 
-.nav-tabs > li > a:hover, 
-.nav-tabs > li > a:focus, 
-.nav-tabs > li.active > a, 
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
-  border: none;
-  border-radius: 0;
-}
+<style>
+.mySlides {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width:100%;
+  display:none;}
 
-.nav-list { border-bottom: 1px solid #eee; }
-.nav-list > li { 
-  padding: 20px 15px 15px;
-  border-left: 1px solid #eee; 
-}
-.nav-list > li:last-child { border-right: 1px solid #eee; }
-.nav-list > li > a:hover { text-decoration: none; }
-.nav-list > li > a > span {
-  display: block;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.mega-dropdown { position: static !important; }
-.mega-dropdown-menu {
-  padding: 20px 15px 15px;
-  text-align: center;
-  width: 100%;
-}
-</style>
-/
 .thumb {
   position:relative;
   width:300px;
@@ -155,243 +114,25 @@ Logo by Sneaker-mission.com (http://www.sneaker-mission.com/)
  bottom: 0px;
  z-index: 1;
 }
-.mySlides {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  display:none;}
-
-</style>
-</head>
-	<body ng-app="myApp" >
-	<div id="main">
-			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-		<div id="mySidenav" class="sidenav">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<a href="/#!/show/saree">Sarees</a>
-			<a href="/#!/show/suit">Suits</a>
-			<a href="/#!/show/lehenga">Lehengas</a>
-			<a href="/#!/show/dupatta">Dupattas</a>
-			<a href="/#!/show/shawl">Shawls</a>
-			<a href="/#!/show/bed_cover">Bed Covers</a>
-			<a href="/#!/show/dress_material">Dress Material</a>
-		</div>
-		
-			<a href="/#!/login" class="icon-block">
-              <i class="fa fa-sign-in" style="font-size:40px;color:black; "></i>
-            </a>
-			<a href="/#!/cart" class="icon-blocks">
-				<i class="fa fa-cart-arrow-down" style="font-size:40px;color:black;"></i>
-			</a>
-				<div class="title">
-
-				    <h2>New Sanchita Bastralaya</h2>
-				    
-				</div> 
-        <ng-view></ng-view>
-				
-<div class="w3-content w3-section" style="max-width:1200px">
-  <img class="mySlides" src="images/saree1.jpg" style="width:100%">
-  <img class="mySlides" src="images/saree2.jpg" style="width:100%">
-  <img class="mySlides" src="images/saree3.jpg" style="width:100%">
-</div>
-<br>
-<br>
-<div class="row">
-  <div class="col-md-6">
-    <img src="images/saree1.jpg"  class="image" style="width:100%">
-      <div class="overlay">Saree</div>
-  </div>
-  <div class="col-md-6">
-    <div class="col-md-6">
-      <img src="images/saree1.jpg"  class="image" style="width:100%">
-        <div class="overlay">Saree</div>
-    </div>
-    <div class="col-md-6">
-      <img src="images/saree1.jpg"  class="image" style="width:100%">
-        <div class="overlay">Saree</div>
-    </div>
-    <div class="col-md-6">
-      <br><br>
-
-      <img src="images/saree1.jpg"  class="image" style="width:100%">
-        <div class="overlay">Saree</div>
-      </div>
-      <div class="col-md-6">
-       <br><br>
-        
-        <img src="images/saree1.jpg"  class="image" style="width:100%">
-        <div class="overlay">Saree</div>
-      </div>
-    </div>
-
-
-</div>
-<br>
-<br>
-<div class="row">
-    <div class="col-md-3">
-      
-          <div class="thumb">
-            <img src="images/saree1.jpg"  class="image" style="width:100%">
-          <div class="overlay">Saree</div>
-      </div>
-        
-    </div>
-    <div class="col-md-3">
-      
-          <div class="thumb">
-            <img src="images/saree1.jpg"  class="image" style="width:100%">
-          <div class="overlay">Saree</div>
-      </div>
-        
-    </div>
-    <div class="col-md-3">
-      
-          <div class="thumb">
-            <img src="images/saree1.jpg"  class="image" style="width:100%">
-          <div class="overlay">Saree</div>
-      
-        </div>
-    </div>
-    <div class="col-md-3">
-      
-          <div class="thumb">
-            <img src="images/saree1.jpg"  class="image" style="width:100%">
-          <div class="overlay">Saree</div>
-      </div>
-        
-    </div>
-    </div>
-
-
-
-
-<br><br>
- <h2>Featured Products</h2>
-  
-<div class="row">
-    <div class="col-md-3">
-    	
-        	<div class="thumb">
-        		<img src="images/saree1.jpg"  class="image" style="width:100%">
-					<div class="overlay">Saree</div>
-			</div>
-        
-    </div>
-    <div class="col-md-3">
-    	
-        	<div class="thumb">
-        		<img src="images/saree1.jpg"  class="image" style="width:100%">
-					<div class="overlay">Saree</div>
-			</div>
-        
-    </div>
-    <div class="col-md-3">
-    	
-        	<div class="thumb">
-        		<img src="images/saree1.jpg"  class="image" style="width:100%">
-					<div class="overlay">Saree</div>
-			
-        </div>
-    </div>
-    <div class="col-md-3">
-    	
-        	<div class="thumb">
-        		<img src="images/saree1.jpg"  class="image" style="width:100%">
-					<div class="overlay">Saree</div>
-			</div>
-        
-    </div>
-</div>
-<br><br>
-<h2>New Arrivals</h2>
-<div class="row">
-    <div class="col-md-3">
-    	
-        	<div class="thumb">
-        		<img src="images/saree1.jpg"  class="image" style="width:100%">
-					<div class="overlay">Saree</div>
-			</div>
-        
-    </div>
-    <div class="col-md-3">
-    	
-        	<div class="thumb">
-        		<img src="images/saree1.jpg"  class="image" style="width:100%">
-					<div class="overlay">Saree</div>
-			</div>
-        
-    </div>
-    <div class="col-md-3">
-    	
-        	<div class="thumb">
-        		<img src="images/saree1.jpg"  class="image" style="width:100%">
-					<div class="overlay">Saree</div>
-			
-        </div>
-    </div>
-    <div class="col-md-3">
-    	
-        	<div class="thumb">
-        		<img src="images/saree1.jpg"  class="image" style="width:100%">
-					<div class="overlay">Saree</div>
-			</div>
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-		
-		
-		<script>
-		var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 6000); // Change image every 2 seconds
-}
-			function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-		</script>
-	</body>
-</html> -->
-
-
-<style>
 
 .title5{
-    padding: 20px 10px 20px 20px;
-    font-size: 100%;
-    color:#5c5c3d; 
+    padding: 10px 10px 10px 10px;
+    font-size: 30px;
+    color:#F8C471; 
     float: left;
     width: 100%;
+    font-family: 'Macondo', cursive;
 }
 .title2{
    border-bottom:solid 1px #999966;
-    padding: 10px 20px 10px 20px;
-    font-size: 100%;
-    color:#5c5c3d; 
+    padding: 5px 10px 10px 10px;
+    font-size: 20px;
+    color:#85C1E9; 
     text-align: center;
     float: left;
     width: 100%;
+    font-family: 'Macondo', cursive;
+font-family: 'Dosis', sans-serif;
 }
 
 .dropdown-menu-subtype {
@@ -467,12 +208,56 @@ li {
 .cart12-icon12-img12{
   height: 42px;
 }
+
+
+.mega-menu-container {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  display: none;
+}
+.mega-menu-text{
+  color:#95A5A6;
+}
+
+.mega-menu {
+  background: #fff;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  padding: 10px;
+}
+.mega-menu-heading{
+  color:#5DADE2;
+}
+.border-top{
+    float: left;
+    width: 80%;
+    height: 1px;
+    background: #95A5A6;
+}
+
+.menu-item{
+  padding-left:10px;
+  padding-right:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+.menu-item:hover {
+  background: #ebf9eb;
+
+}
+
+.menu-item-link, .menu-item-link:hover, .menu-item-link:active, .menu-item-link:visited {
+  text-decoration: none;
+}
+
+
+
 </style>
 </head>
 
 <body ng-app="myApp">
-
-<div class="title5" >NEW SANCHITA BASTRALAYA
+ <div class="title5"><strong>New Sanchita Bastralaya</strong>
   <div class="login1-icon1-div1">
     <a href="/#!/login">
       <img src="/images/icons/avatar.png" height="25">
@@ -485,84 +270,117 @@ li {
     </a>
   </div>
 
-</div>
-<div class="title2" >
+</div> 
+ <div class="title2" >
   <ul class="inline dropdown">
-    <li>
-      <div class='inline sub-type'><div><a href="/#!/show/saree">Saree</a></div></div>
+    <li id="categories">
+      <div class='inline sub-type'><div><strong>Categories</strong></div></div>
     </li>
     <li>
-      <div class='inline sub-type'><div><a href="/#!/show/suit">Suit</a></div></div>
+      <div class='inline sub-type'><div><a href="/#!/show/saree"><strong>Saree</strong></a></div></div>
     </li>
     <li>
-      <div class='inline sub-type'><div><a href="/#!/show/lehenga">Lehenga</a></div></div>
+      <div class='inline sub-type'><div><a href="/#!/show/suit"><strong>Suit</strong></a></div></div>
     </li>
     <li>
-      <div class='inline sub-type'><div><a href="/#!/show/shawl">Shawl</a></div></div>
+      <div class='inline sub-type'><div><a href="/#!/show/lehenga"><strong>Lehenga</strong></a></div></div>
     </li>
     <li>
-      <div class='inline sub-type'><div><a href="/#!/show/dupatta">Dupatta</a></div></div>
+      <div class='inline sub-type'><div><a href="/#!/show/shawl"><strong>Shawl</strong></a></div></div>
     </li>
     <li>
-      <div class='inline sub-type'><div><a href="/#!/show/bed_cover">Bed Covers</a></div></div>
+      <div class='inline sub-type'><div><a href="/#!/show/dupatta"><strong>Dupatta</strong></a></div></div>
     </li>
     <li>
-      <div class='inline sub-type'><div><a href="/#!/show/dress_material">Dress Material</a></div></div>
+      <div class='inline sub-type'><div><a href="/#!/show/bed_cover"><strong>Bed Covers</strong></a></div></div>
+    </li>
+    <li>
+      <div class='inline sub-type'><div><a href="/#!/show/dress_material"><strong>Dress Material</strong></a></div></div>
     </li>
     
   </ul>
 </div>
-<div class="dropdown-menu-subtype">
-  <div class="title2" >
-    <ul class="inline dropdown">
-      <li >
-        <div class="item">
-          <img src="images/dropdown/sarees/dhakai_jamdani.jpg" class="menu-img">
-            <span class="caption" ><strong>DhakaiJamdani</strong></span>
-        </div>
-        <li >
-        <div class="item">
-          <img src="images/dropdown/sarees/dhakai_jamdani.jpg" class="menu-img">
-            <span class="caption"><strong>DhakaiJamdani</strong></span>
-        </div>
-      </li>
-      <li>
-        <div class="item">
-          <img src="images/dropdown/sarees/tussar_silk_saree.jpg" class="menu-img">
-            <span class="caption"><strong>DhakaiJamdani</strong></span>
-        </div>
-      </li>
-      <li>
-        <div class="item">
-          <img src="images/dropdown/sarees/tussar_silk_saree.jpg" class="menu-img">
-            <span class="caption"><strong>DhakaiJamdani</strong></span>
-        </div>
-      </li>
-      <li>
-        <div class="item">
-          <img src="images/dropdown/sarees/tussar_silk_saree.jpg" class="menu-img">
-            <span class="caption"><strong>DhakaiJamdani</strong></span>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
 
 <div style="float: left; width: 100%;"><ng-view></ng-view></div>
 
+
+<div class="mega-menu-container">
+  <div class="col-sm-10 col-sm-offset-1 mega-menu">
+    <div class="col-md-3 black">
+      <div class="mega-menu-heading">
+           <h4><strong> <a href="/#!/show/saree" class="menu-item-link">Saree</a> </strong></h4> 
+      </div>
+           <div class="mega-menu-text">
+             
+              <div class="menu-item"><a href="/#!/show/suit">Kanjeevaram</a></div>
+             <div class="menu-item">south silk</div>
+             <div class="menu-item">bengal handloom</div>
+             <div class="menu-item">dupian silk</div>
+             <div class="menu-item">gheecha tussar</div>
+           </div>
+         
+        <hr/>
+    </div>
+    <div class="col-md-3">
+      <div class="mega-menu-heading">
+         <h4> <strong><a href="/#!/show/suit" class="menu-item-link">Suits</a></strong></h4>
+      </div>
+      <div class="mega-menu-text">
+             <div class="menu-item">south cotton</div>
+             <div class="menu-item">chiffon</div>
+             <div class="menu-item">raw silk</div>
+             <hr/>
+           </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="mega-menu-heading">
+         <h4> <strong>Dupatta</strong></h4>
+      </div>
+        <hr />
+    </div>
+    <div class="col-md-3">
+      <div class="mega-menu-heading">
+           <h4><strong> Shawl</strong></h4>
+      </div>
+      <hr />
+    </div>
+    <div class="col-md-3">
+      <div class="mega-menu-heading">
+            <h4><strong>Bed Cover</strong></h4>
+      </div>
+      <hr />
+    </div>
+    
+    <div class="col-md-3 black">
+      <div class="mega-menu-heading">
+         <h4><strong>   Lehenga</strong></h4>
+         </div>
+         <hr />
+    </div>
+    <div class="col-md-3 black">
+      <div class="mega-menu-heading">
+           <h4><strong> Dress Material</strong></h4>
+      </div>
+      <hr />
+    </div>
+  </div>
+</div>
+    
 <script type="text/javascript">
-  
-  $(document).ready(function() {
-    $('.dropdown').hover(function() {
-      $('.dropdown-menu-subtype').stop( true, true ).slideDown("fast");
-    });
 
-    $('.dropdown-menu-subtype').hover(function() {}, function() {
-      $('.dropdown-menu-subtype').stop( true, true ).slideUp("fast");
-    });
-  });
+var menuIsOpened = false;
 
+$('#categories').click(function() {
+  if(menuIsOpened) {
+    $('.mega-menu-container').hide();
+    menuIsOpened = false;
+  }else{
+    $('.mega-menu-container').show();
+    menuIsOpened = true;
+  }
+});  
 </script>
-            
+
 </body>
 </html>

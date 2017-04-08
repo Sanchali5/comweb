@@ -24,12 +24,19 @@
     padding-left: 70px;
 }
 </style>
-<div >
+<div ng-if = "isALoggedIn">
+	<div >
 		<div class="style4">
 		    <form action ="/add_product" enctype="multipart/form-data"  method = "post" > 	
-				<input  id="input1" name="product_type" placeholder="product_types" >	
+		    	<div ng-repeat="t in types">
+		    		<input type="radio" name="product_type" value="t._id" ng-click="selectItem(t)"/>{{t.type}}
+		    	</div>
+				
 				</br></br> 
-				<input  id="input1" name="product_subtype" ng-model="product_subtype" placeholder="product_subtype" >	   	
+				<select name="product_subtype">
+					<option ng-repeat="s in subtypes" value="{{s._id}}">{{s.type}}</option>
+					
+				</select>  	
 				</br></br>
                 <input  id="input1" name="product_description"  placeholder="product_description" ng-model="product_description" >
 				<br></br>
@@ -53,11 +60,6 @@
               
 			</form>
 			    
-                
-        
-
-                
-               
-	</div>	 
-
- </div>
+        </div>	 
+	</div>
+</div>

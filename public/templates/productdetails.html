@@ -79,19 +79,17 @@ body {
 					<div class="preview col-md-4" >
 						
 						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" ><img src="{{displayPic}}" ng-click="getImage({{p.img}})" /></div>
-						  <div class="tab-pane" ><img src="{{p.img1}}" /></div>
-						  <div class="tab-pane" ><img src="{{p.img2}}" /></div>
-						  <div class="tab-pane" ><img src="{{p.img3}}" /></div>
+						  <div class="tab-pane active" ><img src="{{displayPic}}"  /></div>
+						  
 						  
 						</div>
 					</div>	
 						<div class="preview col-md-3">
 						<ul class="preview-thumbnail nav nav-tabs">
-						  <li class="active"><a ><img src="{{p.img}}" /></a></li>
-						  <li><a ><img src="{{p.img1}}" /></a></li>
-						  <li><a ><img src="{{p.img2}}" /></a></li>
-						  <li><a ><img src="{{p.img3}}" /></a></li>
+						  <li class="active"><a ><img src="{{p.img}}" ng-click="getImage(p.img)"/></a></li>
+						  <li><a ><img src="{{p.img1}}" ng-click="getImage(p.img1)"/></a></li>
+						  <li><a ><img src="{{p.img2}}" ng-click="getImage(p.img2)" /></a></li>
+						  <li><a ><img src="{{p.img3}}" ng-click="getImage(p.img3)" /></a></li>
 						 
 						</ul>
 						
